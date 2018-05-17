@@ -1,0 +1,147 @@
+.hot {
+  padding: 0;
+  width: 100%;
+}
+
+.tabNav {
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+
+.tabNav-box {
+  width: 100%;
+  white-space: nowrap;
+}
+
+.tabNav-item {
+  font-size: 16px;
+  display: inline-block;
+  margin-right: 30px;
+}
+.tabNav-item-active {
+  color: #ff9999;
+  border-bottom: 2px solid #ff9999;
+}
+
+.swiper {
+  width: 100%;
+  margin-top: 5px;
+}
+
+.img-item {
+  width: 100%;
+}
+
+/* 帖子列表 */
+
+.postList {
+  width: 100%;
+  padding: 20rpx 20rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.postList::after {
+  content: '';
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: scale(0.95);
+}
+
+.post-user {
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+.post-user-avatar {
+  display: inline-block;
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.post-user-avatar image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.post-user-msg {
+  margin-left: 20rpx;
+}
+
+.post-user-msg .name {
+  font-size: 14px;
+}
+
+.post-user-msg .time {
+  color: #909090;
+  font-size: 12px;
+}
+
+.follow-btn[size=mini] {
+  height: 20px;
+  line-height: 20px;
+  background: #fff;
+  overflow: visible;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  right: 20rpx;
+  transform: translateY(-50%);
+  padding: 0 8px;
+  border: 1px solid #f99;
+  color: #f99;
+}
+
+.follow-btn[size=mini]::after {
+  border: none;
+}
+
+.post-cotent {
+  width: 100%;
+  font-size: 12px;
+}
+
+.post-cotent .text {
+  display: block;
+  padding: 5px 0;
+}
+
+.post-content-img {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.post-content-img image {
+  padding: 0 5rpx;
+  box-sizing: border-box;
+}
+/* 不同图片数量的不同宽高样式 */
+.onePiece {
+  width: 100%;
+  max-height: 300rpx;
+}
+
+.twoPiece {
+  width: 50%;
+}
+
+.threePiece {
+  width: 33.3333%;
+  max-height: 200rpx;
+}
+.fourPiece {
+  width: 50%;
+  max-height: 200rpx;
+  margin-top: 10rpx;
+}

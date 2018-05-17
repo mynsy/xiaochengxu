@@ -1,0 +1,49 @@
+<view class="container">
+  <swiper>
+    <swiper-item>
+
+    </swiper-item>
+  </swiper>
+</view>
+
+<view class="hot">
+  <!-- 导航栏 -->
+  <view class="tabNav">
+    <scroll-view scroll-x="true"  class="tabNav-box">
+      <view class="tabNav-item {{index === active ? 'tabNav-item-active': ''}}" wx:for="{{tabData}}" wx:key="{{index}}" data-index="{{index}}" data-title-name="{{item.typeName}}" bindtap="toggleTab">
+          <text>{{item.typeName}}</text>
+      </view>
+    </scroll-view> 
+  </view>
+  <!-- 轮播图 -->
+  <view class="swiper">
+    <swiper indicator-dots="true" autoplay="true" interval="2000">
+      <block>
+        <swiper-item wx:for="{{swiperData}}" wx:key="{{item.id}}">
+          <image src="http://www.lhkg1999.com/{{item.imgUrl}}" class="img-item" mode="widthFix"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!-- 文章列表 -->
+  <view class="postList" wx:for="{{hotData}}" wx:key="{{index}}">
+    <view class="post-user">
+      <view class="post-user-avatar">
+        <image src="http://www.lhkg1999.com/{{item.user.userIcon}}"></image>
+      </view>
+      <view class="post-user-msg">
+        <view class="name">{{item.user.userName}}</view>
+        <view class="time">4-24 10:00</view>
+      </view>
+      <button size="mini" class="follow-btn">+关注</button>
+    </view>
+    <view class="post-cotent">
+      <text class="text">{{item.content}}</text>
+      <view class="post-content-img">
+        <block wx:for="{{item.mediaList}}" wx:key="{{index}}" wx:for-item="imgItem">
+          <image src="http://www.lhkg1999.com/{{imgItem}}" class="{{classMap[item.mediaList.length-1]}}" mode="aspectFill" data-img-list="{{item.mediaList}}" bindtap="previewImg"></image>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>
