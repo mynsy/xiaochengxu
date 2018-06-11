@@ -21,21 +21,21 @@ Page({
       title: '精选'
     })
     wx.request({
-      url: 'http://post.lhkg1999.com/jx-post/postService/post/hot?showPage=1',
+      url: 'https://post.szjx520.com/jx-post/postService/post/hot?showPage=1',
       success (res) {
         that.setData({hotData: res.data})
         console.log(that.data.hotData)
       }
     })
     wx.request({
-      url: 'http://post.lhkg1999.com/jx-post/typeService/type/own?userID=2888180411',
+      url: 'https://post.szjx520.com/jx-post/typeService/type/own?userID=2888180411',
       success (res) {
         that.setData({tabData: res.data})
         console.log(that.data.tabData)
       }
     })
     wx.request({
-      url: 'http://post.lhkg1999.com/jx-post/carouselService/findAll?type=0',
+      url: 'https://post.szjx520.com/jx-post/carouselService/findAll?type=0',
       success (res) {
         that.setData({swiperData: res.data})
         console.log(that.data.swiperData)
@@ -103,7 +103,7 @@ Page({
   previewImg (ev) {
     let imgArr = ev.currentTarget.dataset.imgList
     imgArr = imgArr.map((item, index) => {
-      return 'http://www.lhkg1999.com/' + item
+      return 'https://www.szjx520.com/' + item
     })
     wx.previewImage({
       urls: imgArr
